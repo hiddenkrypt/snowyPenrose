@@ -2,19 +2,48 @@
   <head>
     <script src="snow.js"></script>
     <style>
-    body{ background-color:#000}
-#pic{ display:none}
-#can{ border:2px solid black;
-    padding-left: 0;
-    padding-right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    display: block; }
+      body{ 
+        background-color:#000
+      }
+      #pic{ 
+        display:none
+      }
+      #can{ 
+        border:2px solid black;
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        display: block; 
+      }
+      #controls{
+        border: 2px solid #323232;
+        padding:1em;
+        position:absolute;
+        right:0;
+        top:0;
+        display: none;
+        color:#929292;
+      }
     </style>
     <meta charset="utf-8">
   </head>
   <body>
     <canvas id="can"></canvas>
     <img id="pic" src="penrose.png">
+    <div id="controls">
+      <label>Density:</label>
+      <input type="range" min="100" max="10000" value="1000" id="density">
+      <div id="densityOut">1000</div>
+      <label>Speed:</label>
+      <input type="range" min="0.01" max="1" value="0.4" step="any" id="speed">
+      <div id="speedOut">0.4</div>
+      <label>Wind Oscillation Rate:</label>
+      <input type="range" min="0" max=".5" value=".006" step="any" id="wosc">
+      <div id="woscOut">0.006</div>
+     
+      <label>Wind Strength:</label>
+      <input type="range" min="0" max="10" value="1" step=".2" id="wstr">
+      <div id="wstrOut">1</div>
   </body>
 </html>
